@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Model Editor</title>
+    <link rel="stylesheet" href="/editor.css" />
+</head>
+<body>
+<div class="container">
+    <h2>Model Configurator</h2>
+
+    <div class="row">
+        <div class="card">
+            <h3>1) Load XML</h3>
+            <input id="file" type="file" accept=".xml" />
+            <button id="btnLoad">Load</button>
+            <div id="loadMsg" class="msg"></div>
+        </div>
+
+        <div class="card">
+            <h3>2) Save XML</h3>
+            <input id="outName" type="text" value="edited.xml" />
+            <button id="btnSave" disabled>Save / Download</button>
+            <div id="saveMsg" class="msg"></div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>Start Editing</h3>
+<!--        <div class="hint">
+            - Every leaf tag becomes an input. <br/>
+            - You can add/delete nodes anywhere (groups, items, fields). <br/>
+            - This is tree-based, so it supports varying counts of LODs/Lights/Attachments/etc.
+        </div>-->
+
+        <div id="editor"></div>
+    </div>
+</div>
+
+<script src="/editor.js"></script>
+</body>
+</html>
